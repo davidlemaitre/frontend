@@ -1,29 +1,15 @@
 FROM node:6.12.3-alpine
-MAINTAINER David Lemaitre
+LABEL maintainer="David Lemaitre"
 
-ENV GULPCLI_VERSION 1.4.0
-ENV MODERNIZR_VERSION 3.5.0
-ENV BROWSERSYNC_VERSION 2.18.13
+ENV GULPCLI_VERSION 2.0.1
 
 # Install requirements
-RUN apk add --no-cache \
-    git \
-    make \
-    gcc \
-    g++ \
-    python \
-    automake \
-    autoconf \
-    nasm \
-    zlib-dev
+RUN apk add --no-cache git
 
-# Install Node packages
-RUN npm install -g \
-    gulp-cli@"$GULPCLI_VERSION" \
-    modernizr@"$MODERNIZR_VERSION" \
-    browser-sync@"$BROWSERSYNC_VERSION"
+# Install gulp-cli
+RUN npm install -g gulp-cli@"$GULPCLI_VERSION"
 
-# Expose ports for Browser-Sync
+# Expose ports for Browsersync
 EXPOSE 3000 3001
 
 # Create app directory
