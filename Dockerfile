@@ -1,4 +1,4 @@
-FROM node:6.12.3-alpine
+FROM node:8.10.0-alpine
 LABEL maintainer="David Lemaitre"
 
 ENV GULPCLI_VERSION 2.0.1
