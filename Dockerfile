@@ -13,5 +13,5 @@ RUN npm install -g gulp-cli@"$GULPCLI_VERSION"
 EXPOSE 3000 3001
 
 # Create app directory
-RUN mkdir -p /usr/src/app
+RUN mkdir -p /var/www/app
 WORKDIR /usr/src/app
