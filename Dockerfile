@@ -1,7 +1,7 @@
-FROM node:8.10.0-alpine
+FROM node:10.23.2-alpine3.11
 LABEL maintainer="David Lemaitre"
 
-ENV GULPCLI_VERSION 2.0.1
+ENV GULPCLI_VERSION 2.3.0
 
 # Install requirements
 RUN apk add --no-cache git
