@@ -1,3 +1,3 @@
 # frontend
 
-Alpine-based image with frontend tools (Node, Yarn, Gulp).
+Frontend tools (Yarn & Gulp) using Alpine variant of the official Node image.
