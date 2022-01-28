@@ -1,12 +1,14 @@
-FROM node:10.24.1-alpine3.11
+FROM node:12.22.9-alpine3.15
 LABEL maintainer="David Lemaitre"
 
 ENV GULPCLI_VERSION 2.3.0
 
-# Install requirements
-RUN apk add --no-cache git
-RUN apk add --no-cache libc6-compat && \
-    ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2
+# Install dependencies
+RUN apk add --no-cache git \
+    gcc \
+    g++ \
+    make \
+    python2
 
 # Install gulp-cli
 RUN npm install -g gulp-cli@"$GULPCLI_VERSION"
