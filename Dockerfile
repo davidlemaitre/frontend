@@ -1,4 +1,4 @@
-FROM node:12.22.9-alpine3.15
+FROM node:12.22.12-alpine3.15
 LABEL maintainer="David Lemaitre"
 
 ENV GULPCLI_VERSION 2.3.0
