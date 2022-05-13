@@ -8,7 +8,10 @@ RUN apk add --no-cache git \
     gcc \
     g++ \
     make \
-    python2
+    python2 \
+    # Required by spritezero
+    libc6-compat && \
+    ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2
 
 # Install gulp-cli
 RUN npm install -g gulp-cli@"$GULPCLI_VERSION"
